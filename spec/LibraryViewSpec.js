@@ -22,12 +22,12 @@ describe("LibraryView", function() {
     view = new LibraryView({collection: fakeSongs});
   });
 
-  it("should render its subviews when you render it", function(){
+  xit("should render its subviews when you render it", function(){
     view.render();
     expect(fakeSubview.render.callCount).toEqual(fakeSongData.length);
   });
 
-  it("should have a header element after being rendered", function(){
+  xit("should have a header element after being rendered", function(){
     expect(view.$el.children().length).toBe(0);
     view.render();
     expect(view.$el.children()[0].tagName).toBe('TH');
