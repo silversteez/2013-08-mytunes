@@ -19,13 +19,8 @@ var SongQueue = Songs.extend({
       }
     });
 
-    this.on('dequeue', function() {
-      that.remove(this);
-    });
-
-    this.on('queue', function() {
-      that.add(this);
-      console.log("songQueue event handler");
+    this.on('dequeue', function(song) {
+      that.remove(song);
     });
   },
 
